@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <script>
+        function phone (company) {
+            this.company = company;
+
+            this.parts = [];
+
+            for(var i = 0; i < 10000; i++) {
+                this.parts.push('부품'+ i + '번');
+            }
+        }
+
+        var lg_phone = [];
+
+        for (var i = 0; i < 20; i++) {
+            lg_phone[i] = new phone('V50_'+ i);
+        }
+    </script>
+</body>
+</html>
