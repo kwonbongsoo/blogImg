@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
+    
+    <div onclick="b.click();">테스트요</div>
+
     <script>
-        function phone (name) {
-            this.name = name;
-        }
-
-        phone.prototype.parts = [];
-        for(var i = 0; i < 10000; i++) {
-            phone.prototype.parts.push('부품'+ i + '번');
-        }
-
-        console.log(phone.prototype.parts);
-
-        var lg_phone = [];
-
-        for (var i = 0; i < 20; i++) {
-            lg_phone[i] = new phone('V50_'+ i);
-        }
-    </script>
+            function phone (name) {
+                this.name = name;
+            }
+        
+            phone.prototype.parts = [];
+            for(var i = 0; i < 10000; i++) {
+                phone.prototype.parts.push('부품'+ i + '번');
+            }
+        
+            var lg_phone = [];
+        
+            for (var i = 0; i < 20; i++) {
+                lg_phone[i] = new phone('V50_'+ i);
+            }
+    
+            function a() {
+                this.click = function () { alert(2); }
+            }
+    
+            var b = new a();
+        </script>
+    
 </body>
 </html>
